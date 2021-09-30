@@ -13,7 +13,7 @@ var checkDead = setInterval(function() {
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
         block.style.animation = "none";
-        alert("click OK to continue and click the mouse to jump. (Game Over. score: )"+Math.floor(counter/100));
+        alert("click OK to continue and click the mouse to jump. Game Over. score:"+Math.floor(counter/100));
         counter=0;
         block.style.animation = "block 1s infinite linear";
     }else{
