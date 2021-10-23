@@ -38,7 +38,7 @@
 //
 // });
 //:: fINaLgetJson:
- $.getJSON('loadFiles/daysTest.json',function(data) {
+ $.getJSON('daysTest.json',function(data) {
 //success
   //step 1: console.log the result
   // console.log(data);
@@ -51,8 +51,18 @@
         console.log($('#daySelect').val());
         let searchCrit = $('#daySelect').val()
 
+    let answer = $('#result-container')
+
         let filteredResults = data.filter(getDayComp);
-        // console.log(filteredResults);
+         for (let i=0; i<filteredResults.length; i++){
+           console.log(filteredResults[i]);
+           let day=filteredResults[i].day;
+           let temperature=filteredResults[i].temperature;
+          
+           let p2 = $('<p>')
+           p2.text (temperature)
+           p2.appendTo (answer)
+         }
         //could now display those results :)
        }
      });
@@ -72,32 +82,33 @@
 <style>
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: 'Arial', Helvetica, sans-serif;
 }
 .body-wrapper{
   width:70%;
   margin-left:15%;
-  background: #6699ff;
+  background: #96dcff;
   padding-bottom:10px;
 }
 header h2{
   text-align:center;
   color:white;
-  background:#3377ff;
+  background:#0daeff;
   padding:2px;
 
 }
 .inputFieldTest{
+    text-align:center;
     margin:2%;
-    background:#3377ff;
+    background:#0daeff;
     color:white;
 
 }
 
 #result-container{
-  margin:2%;
-  background:#ccddff;
-  padding:2%;
+  margin:5%;
+  background:#e0f5ff;
+  padding:20%;
   display:flex;
   flex-wrap:wrap;
   }
@@ -107,12 +118,11 @@ header h2{
   <body>
   <div class = "body-wrapper">
   <header>
-  <h2> Filtering</h2>
+  <h2 > Daily Weather</h2>
   </header>
-<p class = "inputFieldTest"><span>  Type in a day and press enter:: </span><input type="text" id="daySelect" value="Monday"></p>
+<p class = "inputFieldTest"><span>  Type in a day and press enter to see the temperature range: </span><input type="text" id="daySelect" value="Wednesday"></p>
   <section id = "result-container">
   </section>
-
 </div>
   </body>
 </html>
