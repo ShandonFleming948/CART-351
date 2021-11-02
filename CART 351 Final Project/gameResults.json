@@ -1,17 +1,17 @@
 [{
-  "player":"Wednesday",
-  "temperature":"10 to 17 degrees C"
+  "game":"game 1",
+  "gameResults":"The murderer was caught. The cop wins."
  },
  {
-   "player":"Thursday",
-   "temperature":"11 to 13 degrees C"
+   "game":"game 2",
+   "gameResults":"The cop ran out of time. The murderer wins."
  },
  {
-   "player":"Friday",
-   "temperature":"4 to 13 degrees C"
+   "game":"game 3",
+   "gameResults":"The murderer killed everyone. The murderer wins."
  },
  {
-   "player":"Saturday",
-   "temperature":"4 to 9 degrees C"
+   "game":"game 4",
+   "gameResults":"The murderer was caught by a civilian. The cop wins."
  }
  ]

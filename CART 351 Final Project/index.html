@@ -22,45 +22,45 @@
 
 // let daysArray = ["Monday","Tuesday","Thursday","Saturday","Tuesday"]
 //
-// $('#daySelect').keyup(function(e){
+// $('#gameSelect').keyup(function(e){
 //   //test if enter is pressed
 //    if(e.keyCode == 13)
 //    {
-//     console.log($('#daySelect').val());
+//     console.log($('#gameSelect').val());
 //     let filteredResults = daysArray.filter(getDay);
 //     console.log(`filtered results: ${filteredResults}`);
 //    }
 //  });
 //
 //  function getDay(currentObj) {
-//        return currentObj!==$('#daySelect').val();
+//        return currentObj!==$('#gameSelect').val();
 //    }
 //
 // });
 //:: fINaLgetJson:
- $.getJSON('daysTest.json',function(data) {
+ $.getJSON('gameResults.json',function(data) {
 //success
   //step 1: console.log the result
   // console.log(data);
   // console.log(data[0].day);
   //2 :: wait for key up
-  $('#daySelect').keyup(function(e){
+  $('#gameSelect').keyup(function(e){
        //test if enter is pressed
        if(e.keyCode == 13)
        {
-        console.log($('#daySelect').val());
-        let searchCrit = $('#daySelect').val()
+        console.log($('#gameSelect').val());
+        let searchCrit = $('#gameSelect').val()
 
     let answer = $('#result-container')
 
-        let filteredResults = data.filter(getDayComp);
+        let filteredResults = data.filter(getGameData);
          for (let i=0; i<filteredResults.length; i++){
            console.log(filteredResults[i]);
-           let day=filteredResults[i].day;
-           let temperature=filteredResults[i].temperature;
+           let game = filteredResults[i].game;
+           let gameResults = filteredResults[i].gameResults;
 
            let p2 = $('<p>')
-           p2.text (temperature)
+           p2.text (gameResults)
            p2.appendTo (answer)
          }
         //could now display those results :)
@@ -72,8 +72,8 @@
   console.log( "error" );
 });
 
-    function getDayComp(currentObj) {
-      return currentObj.day===$('#daySelect').val();
+    function getGameData(currentObj) {
+      return currentObj.game===$('#gameSelect').val();
     }
 
 });
@@ -87,27 +87,27 @@ html {
 .body-wrapper{
   width:70%;
   margin-left:15%;
-  background: #96dcff;
+  background: #858585;
   padding-bottom:10px;
 }
 header h2{
   text-align:center;
   color:white;
-  background:#0daeff;
+  background:#000000;
   padding:2px;
 
 }
 .inputFieldTest{
     text-align:center;
     margin:2%;
-    background:#0daeff;
+    background:#000000;
     color:white;
 
 }
 
 #result-container{
   margin:5%;
-  background:#e0f5ff;
+  background:#ffffff;
   padding:20%;
   display:flex;
   flex-wrap:wrap;
@@ -118,9 +118,9 @@ header h2{
   <body>
   <div class = "body-wrapper">
   <header>
-  <h2 > Daily Weather</h2>
+  <h2 > Murder Mystery Game Stats</h2>
   </header>
-<p class = "inputFieldTest"><span>  Type in a day and press enter to see the temperature range: </span><input type="text" id="daySelect" value="Wednesday"></p>
+<p class = "inputFieldTest"><span>  Type in a game number and press enter to see the stats (ex: game 1): </span><input type="text" id="gameSelect" value="game 1"></p>
   <section id = "result-container">
   </section>
 </div>
