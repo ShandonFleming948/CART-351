@@ -1,0 +1,17 @@
+[{
+  "player":"Wednesday",
+  "temperature":"10 to 17 degrees C"
+ },
+ {
+   "player":"Thursday",
+   "temperature":"11 to 13 degrees C"
+ },
+ {
+   "player":"Friday",
+   "temperature":"4 to 13 degrees C"
+ },
+ {
+   "player":"Saturday",
+   "temperature":"4 to 9 degrees C"
+ }
+ ]
