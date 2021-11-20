@@ -56,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   <p><strong>Select a Course:</strong></p>
 
   <form action="/action_page.php">
-    <label for="cars">Choose a course:</label>
+    <label for="course">Choose a course:</label>
     <select id="course" name='a_course'>
       <option value="course1">CART 351</option>
       <option value="course2">CART 360</option>
@@ -70,13 +70,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   <p><strong>Select a Teacher:</strong></p>
 
   <form action="/action_page.php">
-    <label for="cars">Choose a teacher:</label>
-    <select id="cars" name="cars">
-      <option value="volvo">Ms. Sabine</option>
-      <option value="saab">Mr. Elio</option>
-      <option value="fiat">Mr. Jhave</option>
-      <option value="audi">Mr. Eric</option>
-      <option value="audi">Mr. Totaro</option>
+    <label for="teacher">Choose a teacher:</label>
+    <select id="teacher" name='a_teacher'>
+      <option value="teacher1">Ms. Sabine</option>
+      <option value="teacher2">Mr. Elio</option>
+      <option value="teacher3">Mr. Jhave</option>
+      <option value="teacher4">Mr. Eric</option>
+      <option value="teacher5">Mr. Totaro</option>
     </select>
     <!-- <input type="submit"> -->
   </form>
@@ -84,12 +84,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   <p><strong>Select a Classroom:</strong></p>
 
   <form action="/action_page.php">
-    <label for="cars">Choose a classroom:</label>
-    <select id="cars" name="cars">
-      <option value="volvo">EV-5.709</option>
-      <option value="saab">EV-7.765</option>
-      <option value="fiat">EV 6.761</option>
-      <option value="audi">Remote</option>
+    <label for="classroom">Choose a classroom:</label>
+    <select id="classroom" name='a_classroom'>
+      <option value="classroom1">EV-5.709</option>
+      <option value="classroom2">EV-7.765</option>
+      <option value="classroom3">EV 6.761</option>
+      <option value="classroom4">Remote</option>
     </select>
     <!-- <input type="submit"> -->
   </form>
