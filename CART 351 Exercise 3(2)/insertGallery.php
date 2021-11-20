@@ -53,41 +53,44 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <h2>Homework Agenda/To Do List :::</h2>
 <fieldset>
 
-  <p>Select a Course:</p>
+  <p><strong>Select a Course:</strong></p>
 
   <form action="/action_page.php">
     <label for="cars">Choose a course:</label>
     <select id="cars" name="cars">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="fiat">Fiat</option>
-      <option value="audi">Audi</option>
+      <option value="volvo">CART 351</option>
+      <option value="saab">CART 360</option>
+      <option value="fiat">CART 345</option>
+      <option value="audi">THEO 202</option>
+      <option value="audi">FMST 200</option>
     </select>
     <input type="submit">
   </form>
 
-  <p>Select a Teacher:</p>
+  <p><strong>Select a Course:</strong></p>
 
   <form action="/action_page.php">
     <label for="cars">Choose a course:</label>
     <select id="cars" name="cars">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="fiat">Fiat</option>
-      <option value="audi">Audi</option>
+      <option value="volvo">CART 351</option>
+      <option value="saab">CART 360</option>
+      <option value="fiat">CART 345</option>
+      <option value="audi">THEO 202</option>
+      <option value="audi">FMST 200</option>
     </select>
     <input type="submit">
   </form>
 
-  <p>Select a Classroom:</p>
+  <p><strong>Select a Course:</strong></p>
 
   <form action="/action_page.php">
     <label for="cars">Choose a course:</label>
     <select id="cars" name="cars">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="fiat">Fiat</option>
-      <option value="audi">Audi</option>
+      <option value="volvo">CART 351</option>
+      <option value="saab">CART 360</option>
+      <option value="fiat">CART 345</option>
+      <option value="audi">THEO 202</option>
+      <option value="audi">FMST 200</option>
     </select>
     <input type="submit">
   </form>
