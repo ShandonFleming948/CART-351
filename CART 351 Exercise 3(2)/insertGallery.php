@@ -52,9 +52,49 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <!-- group the related elements in a form -->
 <h2>Homework Agenda/To Do List :::</h2>
 <fieldset>
-<p><label>Course/Class:</label><input type="text" size="24" maxlength = "40" name = "a_name" required></p>
+
+  <p>Select a Course:</p>
+
+  <form action="/action_page.php">
+    <label for="cars">Choose a course:</label>
+    <select id="cars" name="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+    <input type="submit">
+  </form>
+
+  <p>Select a Teacher:</p>
+
+  <form action="/action_page.php">
+    <label for="cars">Choose a course:</label>
+    <select id="cars" name="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+    <input type="submit">
+  </form>
+
+  <p>Select a Classroom:</p>
+
+  <form action="/action_page.php">
+    <label for="cars">Choose a course:</label>
+    <select id="cars" name="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+    <input type="submit">
+  </form>
+
+<!-- <p><label>Course/Class:</label><input type="text" size="24" maxlength = "40" name = "a_name" required></p>
 <p><label>Teacher:</label><input type = "text" size="24" maxlength = "40"  name = "a_title" required></p>
-<p><label>Classroom:</label><input type = "text" size="24" maxlength = "40" name = "a_geo_loc" required></p>
+<p><label>Classroom:</label><input type = "text" size="24" maxlength = "40" name = "a_geo_loc" required></p> -->
 <p><label>Description of Assignment:</label><textarea type = "text" rows="4" cols="50" name = "a_descript" required></textarea></p>
 <p><label>Due Date (DD-MM-YYYY):</label><input type="date" name="a_date" required></p>
 <p><label>Upload Assignment:</label> <input type ="file" name = 'filename' size=10 required/></p>
