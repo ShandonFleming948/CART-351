@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
  $teacher = $_POST['a_teacher'];
  $classroom = $_POST['a_classroom'];
  $description = $_POST['a_descript'];
- $creationDate = $_POST['a_date'];
+ $dueDate = $_POST['a_date'];
  if($_FILES)
   {
     //echo "file name: ".$_FILES['filename']['name'] . "<br />";
@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $myPackagedData->teacher = $teacher ;
     $myPackagedData->classroom = $classroom ;
     $myPackagedData->description = $description ;
-    $myPackagedData->creation_Date = $creationDate ;
+    $myPackagedData->due_Date = $dueDate ;
     $myPackagedData->fileName = $fname ;
      /* Now we want to JSON encode these values as a JSON string ..
      to send them to $.ajax success  call back function... */
