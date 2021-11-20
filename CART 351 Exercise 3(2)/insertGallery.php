@@ -3,9 +3,9 @@
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 // need to process
- $artist = $_POST['a_name'];
- $title = $_POST['a_title'];
- $loc = $_POST['a_geo_loc'];
+ $course = $_POST['a_course'];
+ $teacher = $_POST['a_teacher'];
+ $classroom = $_POST['a_classroom'];
  $description = $_POST['a_descript'];
  $creationDate = $_POST['a_date'];
  if($_FILES)
@@ -20,9 +20,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     /* make  a new generic php object (note:: php also supports objects -
    but we are NOT doing that in this class - you can if you want ;)  )*/
     $myPackagedData=new stdClass();
-    $myPackagedData->artist = $artist ;
-    $myPackagedData->title = $title ;
-    $myPackagedData->location = $loc ;
+    $myPackagedData->course = $course ;
+    $myPackagedData->teacher = $teacher ;
+    $myPackagedData->classroom = $classroom ;
     $myPackagedData->description = $description ;
     $myPackagedData->creation_Date = $creationDate ;
     $myPackagedData->fileName = $fname ;
@@ -64,7 +64,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       <option value="audi">THEO 202</option>
       <option value="audi">FMST 200</option>
     </select>
-    <input type="submit">
+    <!-- <input type="submit"> -->
   </form>
 
   <p><strong>Select a Teacher:</strong></p>
@@ -78,7 +78,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       <option value="audi">Mr. Eric</option>
       <option value="audi">Mr. Totaro</option>
     </select>
-    <input type="submit">
+    <!-- <input type="submit"> -->
   </form>
 
   <p><strong>Select a Classroom:</strong></p>
@@ -91,12 +91,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       <option value="fiat">EV 6.761</option>
       <option value="audi">Remote</option>
     </select>
-    <input type="submit">
+    <!-- <input type="submit"> -->
   </form>
 
 <!-- <p><label>Course/Class:</label><input type="text" size="24" maxlength = "40" name = "a_name" required></p>
 <p><label>Teacher:</label><input type = "text" size="24" maxlength = "40"  name = "a_title" required></p>
-<p><label>Classroom:</label><input type = "text" size="24" maxlength = "40" name = "a_geo_loc" required></p> -->
+<p><label>Classroom:</label><input type = "text" size="24" maxlength = "40" name = "a_classroom" required></p> -->
 <p><strong>Description of Assignment:</strong></p>
 <p><textarea type = "text" rows="4" cols="50" name = "a_descript" required></textarea></p>
 <p><strong>Due Date (DD-MM-YYYY):</strong><input type="date" name="a_date" required></p>
