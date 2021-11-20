@@ -97,10 +97,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <!-- <p><label>Course/Class:</label><input type="text" size="24" maxlength = "40" name = "a_name" required></p>
 <p><label>Teacher:</label><input type = "text" size="24" maxlength = "40"  name = "a_title" required></p>
 <p><label>Classroom:</label><input type = "text" size="24" maxlength = "40" name = "a_geo_loc" required></p> -->
-<p><label>Description of Assignment:</label></p>
+<p><strong>Description of Assignment:</strong></p>
 <p><textarea type = "text" rows="4" cols="50" name = "a_descript" required></textarea></p>
-<p><label>Due Date (DD-MM-YYYY):</label><input type="date" name="a_date" required></p>
-<p><label>Upload Assignment:</label> <input type ="file" name = 'filename' size=10 required/></p>
+<p><strong>Due Date (DD-MM-YYYY):</strong><input type="date" name="a_date" required></p>
+<p><strong>Upload Assignment:</strong> <input type ="file" name = 'filename' size=10 required/></p>
 <p class = "sub"><input type = "submit" name = "submit" value = "submit my assignment" id ="buttonS" /></p>
  </fieldset>
 </form>
