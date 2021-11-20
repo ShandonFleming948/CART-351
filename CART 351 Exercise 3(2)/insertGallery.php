@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <!--form done using more current tags... -->
 <form id="insertGallery" action="" enctype ="multipart/form-data">
 <!-- group the related elements in a form -->
-<h3> Agenda/To Do List :::</h3>
+<h2>Homework Agenda/To Do List :::</h2>
 <fieldset>
 <p><label>Course/Class:</label><input type="text" size="24" maxlength = "40" name = "a_name" required></p>
 <p><label>Teacher:</label><input type = "text" size="24" maxlength = "40"  name = "a_title" required></p>
