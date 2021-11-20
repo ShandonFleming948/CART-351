@@ -55,7 +55,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
   <p><strong>Select a Course:</strong></p>
 
-  <form action="/action_page.php">
+  <!-- <form action="/action_page.php"> -->
     <label for="course">Choose a course:</label>
     <select id="course" name='a_course'>
       <option value="course1">CART 351</option>
@@ -64,12 +64,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       <option value="course4">THEO 202</option>
       <option value="course5">FMST 200</option>
     </select>
-    <!-- <input type="submit"> -->
+    <input type="submit">
   </form>
 
   <p><strong>Select a Teacher:</strong></p>
 
-  <form action="/action_page.php">
+  <!-- <form action="/action_page.php"> -->
     <label for="teacher">Choose a teacher:</label>
     <select id="teacher" name='a_teacher'>
       <option value="teacher1">Ms. Sabine</option>
@@ -78,12 +78,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       <option value="teacher4">Mr. Eric</option>
       <option value="teacher5">Mr. Totaro</option>
     </select>
-    <!-- <input type="submit"> -->
+    <input type="submit">
   </form>
 
   <p><strong>Select a Classroom:</strong></p>
 
-  <form action="/action_page.php">
+  <!-- <form action="/action_page.php"> -->
     <label for="classroom">Choose a classroom:</label>
     <select id="classroom" name='a_classroom'>
       <option value="classroom1">EV-5.709</option>
@@ -91,7 +91,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       <option value="classroom3">EV 6.761</option>
       <option value="classroom4">Remote</option>
     </select>
-    <!-- <input type="submit"> -->
+    <input type="submit">
   </form>
 
 <!-- <p><label>Course/Class:</label><input type="text" size="24" maxlength = "40" name = "a_name" required></p>
