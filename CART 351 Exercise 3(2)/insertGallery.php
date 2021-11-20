@@ -67,30 +67,29 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     <input type="submit">
   </form>
 
-  <p><strong>Select a Course:</strong></p>
+  <p><strong>Select a Teacher:</strong></p>
 
   <form action="/action_page.php">
-    <label for="cars">Choose a course:</label>
+    <label for="cars">Choose a teacher:</label>
     <select id="cars" name="cars">
-      <option value="volvo">CART 351</option>
-      <option value="saab">CART 360</option>
-      <option value="fiat">CART 345</option>
-      <option value="audi">THEO 202</option>
-      <option value="audi">FMST 200</option>
+      <option value="volvo">Ms. Sabine</option>
+      <option value="saab">Mr. Elio</option>
+      <option value="fiat">Mr. Jhave</option>
+      <option value="audi">Mr. Eric</option>
+      <option value="audi">Mr. Totaro</option>
     </select>
     <input type="submit">
   </form>
 
-  <p><strong>Select a Course:</strong></p>
+  <p><strong>Select a Classroom:</strong></p>
 
   <form action="/action_page.php">
-    <label for="cars">Choose a course:</label>
+    <label for="cars">Choose a classroom:</label>
     <select id="cars" name="cars">
-      <option value="volvo">CART 351</option>
-      <option value="saab">CART 360</option>
-      <option value="fiat">CART 345</option>
-      <option value="audi">THEO 202</option>
-      <option value="audi">FMST 200</option>
+      <option value="volvo">EV-5.709</option>
+      <option value="saab">EV-7.765</option>
+      <option value="fiat">EV 6.761</option>
+      <option value="audi">Remote</option>
     </select>
     <input type="submit">
   </form>
