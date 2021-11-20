@@ -57,12 +57,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
   <form action="/action_page.php">
     <label for="cars">Choose a course:</label>
-    <select id="cars" name="cars">
-      <option value="volvo">CART 351</option>
-      <option value="saab">CART 360</option>
-      <option value="fiat">CART 345</option>
-      <option value="audi">THEO 202</option>
-      <option value="audi">FMST 200</option>
+    <select id="course" name='a_course'>
+      <option value="course1">CART 351</option>
+      <option value="course2">CART 360</option>
+      <option value="course3">CART 345</option>
+      <option value="course4">THEO 202</option>
+      <option value="course5">FMST 200</option>
     </select>
     <!-- <input type="submit"> -->
   </form>
