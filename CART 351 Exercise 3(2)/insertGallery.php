@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <!-- get JQUERY -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--set some style properties::: -->
-<link rel="stylesheet" type="text/css" href="css/gallery_style.css">
+<link rel="stylesheet" type="text/css" href="gallery_style.css">
 </head>
 <body>
   <!-- NEW for the result -->
