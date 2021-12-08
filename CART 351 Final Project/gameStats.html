@@ -1,26 +1,128 @@
 <html>
 
 <head>
-  <title> Murder Mystery </title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-  <!-- <script src="script.js"></script> -->
-  <style>
-  h1 {text-align: center;}
-  </style>
-</head>
+ <title>FILTER EXAMPLE</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script>
+
+   $(document).ready(function(){
+//      console.log("ready");
+//      const colors = ["blue", "green", "orange", "yellow"];
+//      //iterate through colors array and FILTER out what passes the test
+//      let res = colors.filter(oneColor);
+//      console.log(`returned: ${res}`);
+//
+// //testing function
+//    function oneColor(col) {
+//     return col!=='blue';
+//   }
+//
+
+// let daysArray = ["Monday","Tuesday","Thursday","Saturday","Tuesday"]
+//
+// $('#gameSelect').keyup(function(e){
+//   //test if enter is pressed
+//    if(e.keyCode == 13)
+//    {
+//     console.log($('#gameSelect').val());
+//     let filteredResults = daysArray.filter(getDay);
+//     console.log(`filtered results: ${filteredResults}`);
+//    }
+//  });
+//
+//  function getDay(currentObj) {
+//        return currentObj!==$('#gameSelect').val();
+//    }
+//
+// });
+//:: fINaLgetJson:
+$.getJSON('gameResults.json',function(data) {
+//success
+//step 1: console.log the result
+// console.log(data);
+// console.log(data[0].day);
+//2 :: wait for key up
+$('#gameSelect').keyup(function(e){
+     //test if enter is pressed
+     if(e.keyCode == 13)
+     {
+      console.log($('#gameSelect').val());
+      let searchCrit = $('#gameSelect').val()
+
+  let answer = $('#result-container')
+
+      let filteredResults = data.filter(getGameData);
+       for (let i=0; i<filteredResults.length; i++){
+         console.log(filteredResults[i]);
+         let game = filteredResults[i].game;
+         let gameResults = filteredResults[i].gameResults;
+
+         let p2 = $('<p>')
+         p2.text (gameResults)
+         p2.appendTo (answer)
+       }
+      //could now display those results :)
+     }
+   });
+})
+//fail
+.fail(function() {
+console.log( "error" );
+});
+
+  function getGameData(currentObj) {
+    return currentObj.game===$('#gameSelect').val();
+  }
+
+});
+
+ </script>
+<style>
+
+html {
+font-family: 'Arial', Helvetica, sans-serif;
+}
+.body-wrapper{
+width:70%;
+margin-left:15%;
+background: #858585;
+padding-bottom:10px;
+}
+header h2{
+text-align:center;
+color:white;
+background:#000000;
+padding:2px;
+
+}
+.inputFieldTest{
+  text-align:center;
+  margin:2%;
+  background:#000000;
+  color:white;
+
+}
+
+#result-container{
+margin:5%;
+background:#ffffff;
+padding:20%;
+display:flex;
+flex-wrap:wrap;
+}
+
+</style>
 
 <body>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-
-<h1> Game Stats </h1>
-
-<p6>
-<a href="index.html">Home</a>
-</p6>
-
+<div class = "body-wrapper">
+<header>
+<h2 > Murder Mystery Game Stats</h2>
+</header>
+<p class = "inputFieldTest"><span>  Type in a game number and press enter to see the stats (ex: game 1): </span><input type="text" id="gameSelect" value="game 1"></p>
+<section id = "result-container">
+</section>
+</div>
 </body>
 
 </html>
