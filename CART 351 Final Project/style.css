@@ -218,8 +218,8 @@ p12 {
   position: absolute;
 width: 155px;
 height: 49px;
-left: 50px;
-top: 150px;
+left: 200px;
+top: 132px;
 
 font-family: 'Amatic SC', cursive;
 font-style: normal;
@@ -234,8 +234,8 @@ p13 {
   position: absolute;
 width: 155px;
 height: 49px;
-left: 50px;
-top: 150px;
+left: 400px;
+top: 132px;
 
 font-family: 'Amatic SC', cursive;
 font-style: normal;
@@ -250,8 +250,8 @@ p14 {
   position: absolute;
 width: 155px;
 height: 49px;
-left: 50px;
-top: 150px;
+left: 600px;
+top: 132px;
 
 font-family: 'Amatic SC', cursive;
 font-style: normal;
@@ -266,8 +266,8 @@ p15 {
   position: absolute;
 width: 155px;
 height: 49px;
-left: 50px;
-top: 150px;
+left: 800px;
+top: 132px;
 
 font-family: 'Amatic SC', cursive;
 font-style: normal;
@@ -282,8 +282,8 @@ p16 {
   position: absolute;
 width: 155px;
 height: 49px;
-left: 50px;
-top: 150px;
+left: 1000px;
+top: 132px;
 
 font-family: 'Amatic SC', cursive;
 font-style: normal;
@@ -293,6 +293,22 @@ line-height: 48px;
 
 color: #ffffff;
 }
+
+/* select1 {
+  position: absolute;
+width: 155px;
+height: 49px;
+left: 1000px;
+top: 132px;
+
+font-family: 'Amatic SC', cursive;
+font-style: normal;
+font-weight: bold;
+font-size: 35px;
+line-height: 48px;
+
+color: #ffffff;
+} */
 
 rectangle1 {
 position: absolute;
