@@ -2,7 +2,71 @@ body {
   color:#ffffff;
   background-color:#ff0000;
   font-size:18px;
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Amatic SC', cursive;
   background-image: url(img/eerie-spaceship-interior.jpg);
-  background-size: 1270px 700px;
+  background-size: 1270px 650px;
+}
+
+h1 {
+  position: absolute;
+width: 500px;
+height: 79px;
+left: 380px;
+top: -35px;
+font-family: 'Amatic SC', cursive;
+font-style: normal;
+font-weight: bold;
+font-size: 110px;
+line-height: 85px;
+
+color: #ffffff;
+}
+
+p1 {
+  position: absolute;
+width: 139px;
+height: 49px;
+left: 250px;
+top: 175px;
+
+font-family: 'Amatic SC', cursive;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 48px;
+
+color: #ffffff;
+}
+
+p2 {
+  position: absolute;
+width: 139px;
+height: 49px;
+left: 500px;
+top: 225px;
+
+font-family: 'Amatic SC', cursive;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 48px;
+
+color: #ffffff;
+}
+
+p3 {
+  position: absolute;
+width: 139px;
+height: 49px;
+left: 750px;
+top: 225px;
+
+font-family: 'Amatic SC', cursive;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 48px;
+
+color: #ffffff;
 }
