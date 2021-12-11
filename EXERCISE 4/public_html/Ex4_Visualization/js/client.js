@@ -60,23 +60,23 @@ querySelectDropDown.onchange = function() {
       ****/
       case "three":{
        // TODO
-       displayInSquarePattern(parsedJSON);
+       displayRandomPattern(parsedJSON);
         break;
       }
       case "four":{
         // TODO
-        displayInTriangularPattern(parsedJSON);
+        displayJumbledUpPattern(parsedJSON);
         break;
       }
 
       case "five":{
         // TODO
-        displayInOvalPattern(parsedJSON);
+        displayMessedUpPattern(parsedJSON);
         break;
       }
       case "six":{
         // TODO
-        displayInRectangularPattern(parsedJSON);
+        displayRidiculousPattern(parsedJSON);
         break;
       }
       default:{
