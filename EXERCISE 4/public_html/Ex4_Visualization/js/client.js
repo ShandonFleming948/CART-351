@@ -300,5 +300,254 @@ function displayAsDefault(resultSet){
 
 }//function
 
+function displayRandomPattern(resultSet){
+  //reset
+  dataPoints =[];
+  let xPos = 2;
+  let yPos= 1;
+  //for circle drawing
+  let angle = 10;
+  let centerX = 240;
+  let centerY = 530;
+
+  let scalar= 255;
+  let yHeight = Math.cos(angle)*scalar+centerY;
+
+
+  let coloredMoods = {}
+
+  let possibleMoods = resultSet[resultSet.length-1];
+  let possibleColors = ['rgba(30, 14, 25,65)','rgba(46, 53, 445,75)','rgba(41, 52, 345,53)','rgba(51, 102, 255,.4)', 'rgba(77, 121,255,.6)','rgba(102, 140, 255,.6)','rgba(128, 159, 255,.4)','rgba(153, 179, 255,.3)','rgba(179, 198, 255,.6)','rgba(204, 217, 255,.4)'];
+
+  for(let i = 0; i< possibleMoods.length; i++){
+    coloredMoods[possibleMoods[i]] = possibleColors[i];
+
+    }
+
+    //set background of parent ... for fun ..
+      document.getElementById("parent-wrapper").style.background = "rgba(0, 26, 102,1)";
+      description.textContent = "BY AFTER MOOD";
+      description.style.color = 'rgba(0, 64, 255,.5)';
+
+
+
+      for(let i = 0; i<resultSet.length-1; i++){
+        dataPoints.push(new myDataPoint(resultSet[i].dataId,
+          resultSet[i].day,
+          resultSet[i].weather,
+          resultSet[i].start_mood,
+          resultSet[i].after_mood,
+          resultSet[i].after_mood_strength,
+          resultSet[i].event_affect_strength,
+          resultSet[i].eID,
+          //map to the day ...
+          coloredMoods[resultSet[i].after_mood],
+          //last parameter is where should this go...
+          document.getElementById("childOne"),
+          //which css style///
+          "point_two"
+        ));
+/*** circle drawing ***/
+xPos = Math.sin(angle)*scalar+centerX;
+yPos = Math.cos(angle)*scalar+centerY;
+angle +=0.13;
+
+if (angle > 2*Math.PI){
+angle =3;
+scalar-=23;
+}
+ dataPoints[i].update(xPos,yPos);
+}//for
+
+  document.getElementById("childOne").style.height = `${yHeight}px`;
+}//function
+
+function displayJumbledUpPattern(resultSet){
+  //reset
+  dataPoints =[];
+  let xPos = 5;
+  let yPos= 5;
+  //for circle drawing
+  let angle = 78;
+  let centerX = 73;
+  let centerY = 276;
+
+  let scalar= 222;
+  let yHeight = Math.cos(angle)*scalar+centerY;
+
+
+  let coloredMoods = {}
+
+  let possibleMoods = resultSet[resultSet.length-1];
+  let possibleColors = ['rgba(22, 22, 55,55)','rgba(55, 55, 22,33)','rgba(11, 11, 11,11)','rgba(51, 102, 255,.4)', 'rgba(77, 121,255,.6)','rgba(333, 333, 333,333)','rgba(128, 159, 255,.4)','rgba(132, 321, 123,321)','rgba(179, 198, 255,.6)','rgba(204, 217, 255,.4)'];
+
+  for(let i = 0; i< possibleMoods.length; i++){
+    coloredMoods[possibleMoods[i]] = possibleColors[i];
+
+    }
+
+    //set background of parent ... for fun ..
+      document.getElementById("parent-wrapper").style.background = "rgba(0, 88, 102,99)";
+      description.textContent = "BY AFTER MOOD";
+      description.style.color = 'rgba(0, 77, 255,64)';
+
+
+
+      for(let i = 0; i<resultSet.length-1; i++){
+        dataPoints.push(new myDataPoint(resultSet[i].dataId,
+          resultSet[i].day,
+          resultSet[i].weather,
+          resultSet[i].start_mood,
+          resultSet[i].after_mood,
+          resultSet[i].after_mood_strength,
+          resultSet[i].event_affect_strength,
+          resultSet[i].eID,
+          //map to the day ...
+          coloredMoods[resultSet[i].after_mood],
+          //last parameter is where should this go...
+          document.getElementById("childOne"),
+          //which css style///
+          "point_two"
+        ));
+/*** circle drawing ***/
+xPos = Math.sin(angle)*scalar+centerX;
+yPos = Math.cos(angle)*scalar+centerY;
+angle +=0.33;
+
+if (angle > 2*Math.PI){
+angle =0;
+scalar-=60;
+}
+ dataPoints[i].update(xPos,yPos);
+}//for
+
+  document.getElementById("childOne").style.height = `${yHeight}px`;
+}//function
+
+function displayMessedUpPattern(resultSet){
+  //reset
+  dataPoints =[];
+  let xPos = 77;
+  let yPos= 33;
+  //for circle drawing
+  let angle = 48;
+  let centerX = 83;
+  let centerY = 432;
+
+  let scalar= 99;
+  let yHeight = Math.cos(angle)*scalar+centerY;
+
+
+  let coloredMoods = {}
+
+  let possibleMoods = resultSet[resultSet.length-1];
+  let possibleColors = ['rgba(0, 0, 49,92)','rgba(26, 83, 255,.5)','rgba(51, 102, 255,.7)','rgba(123, 241, 333,0)', 'rgba(77, 121,444,.6)','rgba(255, 255, 255,255)','rgba(48, 88, 255,.4)','rgba(153, 179, 47,.3)','rgba(179, 198, 255,.6)','rgba(0,0,0,0)'];
+
+  for(let i = 0; i< possibleMoods.length; i++){
+    coloredMoods[possibleMoods[i]] = possibleColors[i];
+
+    }
+
+    //set background of parent ... for fun ..
+      document.getElementById("parent-wrapper").style.background = "rgba(0, 26, 102,1)";
+      description.textContent = "BY AFTER MOOD";
+      description.style.color = 'rgba(0, 0, 0,.5)';
+
+
+
+      for(let i = 0; i<resultSet.length-1; i++){
+        dataPoints.push(new myDataPoint(resultSet[i].dataId,
+          resultSet[i].day,
+          resultSet[i].weather,
+          resultSet[i].start_mood,
+          resultSet[i].after_mood,
+          resultSet[i].after_mood_strength,
+          resultSet[i].event_affect_strength,
+          resultSet[i].eID,
+          //map to the day ...
+          coloredMoods[resultSet[i].after_mood],
+          //last parameter is where should this go...
+          document.getElementById("childOne"),
+          //which css style///
+          "point_two"
+        ));
+/*** circle drawing ***/
+xPos = Math.sin(angle)*scalar+centerX;
+yPos = Math.cos(angle)*scalar+centerY;
+angle +=0.83;
+
+if (angle > 2*Math.PI){
+angle =93;
+scalar-=39;
+}
+ dataPoints[i].update(xPos,yPos);
+}//for
+
+  document.getElementById("childOne").style.height = `${yHeight}px`;
+}//function
+
+function displayRidiculousPattern(resultSet){
+  //reset
+  dataPoints =[];
+  let xPos = 90;
+  let yPos= 0.9;
+  //for circle drawing
+  let angle = 100;
+  let centerX = 321;
+  let centerY = 123;
+
+  let scalar= 83;
+  let yHeight = Math.cos(angle)*scalar+centerY;
+
+
+  let coloredMoods = {}
+
+  let possibleMoods = resultSet[resultSet.length-1];
+  let possibleColors = ['rgba(0, 0, 0,50)','rgba(26, 83, 255,.5)'];
+
+  for(let i = 0; i< possibleMoods.length; i++){
+    coloredMoods[possibleMoods[i]] = possibleColors[i];
+
+    }
+
+    //set background of parent ... for fun ..
+      document.getElementById("parent-wrapper").style.background = "rgba(0, 300, 10,1)";
+      description.textContent = "BY AFTER MOOD";
+      description.style.color = 'rgba(20,200,20,200)';
+
+
+
+      for(let i = 0; i<resultSet.length-1; i++){
+        dataPoints.push(new myDataPoint(resultSet[i].dataId,
+          resultSet[i].day,
+          resultSet[i].weather,
+          resultSet[i].start_mood,
+          resultSet[i].after_mood,
+          resultSet[i].after_mood_strength,
+          resultSet[i].event_affect_strength,
+          resultSet[i].eID,
+          //map to the day ...
+          coloredMoods[resultSet[i].after_mood],
+          //last parameter is where should this go...
+          document.getElementById("childOne"),
+          //which css style///
+          "point_two"
+        ));
+/*** circle drawing ***/
+xPos = Math.sin(angle)*scalar+centerX;
+yPos = Math.cos(angle)*scalar+centerY;
+angle +=0.89;
+
+if (angle > 2*Math.PI){
+angle =58;
+scalar-=600;
+}
+ dataPoints[i].update(xPos,yPos);
+}//for
+
+  document.getElementById("childOne").style.height = `${yHeight}px`;
+}//function
+
+
 /***********************************************/
 });
